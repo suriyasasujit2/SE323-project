@@ -1,15 +1,16 @@
 /* CSS Document */
 
-	body{background:#000; margin:0px; font-family:Tahoma; color:#FFF; font-size:14px;} 
+	body{background:#FFF; margin:0px; font-family:Tahoma; color:#FFF; font-size:14px;} 
 a{text-decoration:none;}
 img{border:0px;}
 
 #warpall{width:1200px; height:auto; margin:auto; padding-top:80px;}
- #bg_banner{height:383px; width:1200px; background:url(images/banner_web.png); padding-top:30px;}
+#warpall2{background:#000; width:1200px; height:auto; margin:auto; padding-top:80px;}
+ #bg_banner{background:url(images/banner_web.png);height:383px; width:1200px;  padding-top:30px;}
  #bg_welcome{background:url(images/bg_title.png); width:744px; height:331px; margin:auto;}
  
  #navigator{height:90px; width:1200px; background:#282828; padding-top:15px;}
  #content{height:auto; padding:20px; width:1160px; background:#FFF; color:#000;}
-  #footer{height:200px; padding:20px; width:1160px; background:#d8d8d8; color:#000;}
+  #footer{height:5px; padding:20px; width:1160px; background:#d8d8d8; color:#000;}
 
 
