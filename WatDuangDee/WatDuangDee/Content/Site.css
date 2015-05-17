@@ -1,0 +1,107 @@
+﻿/* CSS Document */
+
+body{
+    background:#FFF; margin:0px; 
+    font-family:Tahoma; 
+    color:#FFF; 
+    font-size:14px;
+
+} 
+a{
+    text-decoration:none;
+}
+img{
+    border:0px;
+}
+table{
+    border:1;
+    align-content:center;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#warpall{
+    width:1200px; 
+    height:auto; 
+    margin:auto; 
+    padding-top:80px; 
+    border:1px #000000;
+}
+
+#warpall3{
+    background:url images/facebook.png); 
+    width:1200px; 
+    height:auto; 
+    margin:auto; 
+    padding-top:25px; 
+    text-align:right;
+}
+
+#warpall2{
+    background:#000; 
+    width:1200px; 
+    height:auto; 
+    margin:auto; 
+    padding-top:20px; 
+    text-align:right;
+}
+
+#bg_banner{
+    background:url(images/banner_web.png);
+    height:383px; 
+    width:1200px;  
+    padding-top:30px;
+}
+#bg_welcome{
+    background:url(images/bg_title.png); 
+    width:744px; 
+    height:331px; 
+    margin:auto;
+}
+ 
+#navigator{
+     height:90px; 
+     width:1200px; 
+     background:#282828; 
+     padding-top:15px; 
+ }
+#content_main{
+    height:auto; 
+    padding:20px; 
+    width:1158px; 
+    background-color:#FFF; 
+    color:#000; 
+    border:1px solid #000; 
+}
+#footer{
+    height:32px; 
+    padding:25px; 
+    width:1151px; 
+    background:#21abe4; 
+    color:#000; 
+    text-align:center;
+}
+#content{
+    height:auto; 
+    padding:20px; 
+    width:1158px; 
+    background-color:#ff6a00; 
+    color:#FFF; 
+    border:1px solid #000; 
+    font-size:24px;
+    
+}
+#inside_content{
+    background-color:#808080;
+    height:500px;  
+    width:800px; 
+    color:black;
+    font-size:14px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align:center;
+}
+
+

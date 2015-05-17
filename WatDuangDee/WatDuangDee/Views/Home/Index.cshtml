@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" /> 
+    <link media="screen" rel="stylesheet" href="js/colorbox/example1/colorbox.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/colorbox/jquery.colorbox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".tbox").colorbox({ width: "905", height: "600", iframe: true });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="warpall">
+        <img src="~/Content/images/social.png" width="1200" height="40" usemap="#Map" border="0" />
+        <div id="warpall2">
+            Username :
+            <input type="text" name="id" id="id" />
+            Password :
+            <input type="password" name="id2" id="id2" />
+            <input type="submit" name="login" id="login" value="Submit" />
+            <form id="form1" name="form1" method="post" action="">
+                <label for="id"></label>
+            </form>
+        </div>
+
+        <img src="~/Content/Pic_edit/test_bar4.png" width="1200" height="77" usemap="#Map" border="0" />
+        <map name="Map" id="Map">
+            <area shape="rect" coords="272,26,349,70" href="@Url.Action("Index")" />
+            <area shape="rect" coords="353,27,434,69" href="@Url.Action("History")" />
+            <area shape="rect" coords="440,26,511,71" href="@Url.Action("News")" />
+            <area shape="rect" coords="515,26,605,71" href="@Url.Action("Activity")" />
+            <area shape="rect" coords="608,27,757,70" href="@Url.Action("QA")" />
+            <area shape="rect" coords="760,28,859,69" href="@Url.Action("Dhamma")" />
+            <area shape="rect" coords="864,30,999,69" href="@Url.Action("Photo")" />
+            <area shape="rect" coords="1003,31,1076,70" href="@Url.Action("Video")" />
+            <area shape="rect" coords="1091,32,1199,72" href="@Url.Action("Contact")" />
+            <area shape="circle" coords="1150,15,13" href="#" />
+            <area shape="circle" coords="1074,24,9" href="#" />
+            <area shape="circle" coords="1102,24,10" href="#" />
+            <area shape="circle" coords="1130,24,10" href="#" />
+            <area shape="circle" coords="1161,24,10" href="#" />
+            <area shape="circle" coords="1182,15,12" href="#" />
+        </map>
+        <div id="bg_banner">
+            <div id="bg_welcome"></div>
+        </div>
+
+
+
+        <div id="content_main">
+            <table width="100%" cellpadding="0" cellspacing="2">
+                <tr>
+                    <td colspan="3"><img src="~/Content/images/news_head.png" usemap="#Map2" border="0" /></td>
+                    <td colspan="3"><img src="~/Content/images/Act_head.png" usemap="#Map3" border="0" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" valign="top">&nbsp;</td>
+                    <td colspan="3" valign="top">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="16%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><p>@Html.ActionLink("News1", "News") </p></td>
+                    <td width="17%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><p><a href="news.html">ทดสอบข่าว 2</a></p></td>
+                    <td width="17%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><p><a href="news.html">ทดสอบข่าว 3</a></p></td>
+                    <td width="17%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><p><a href="activity.html">ทดสอบกิจกรรม 1</a></p></td>
+                    <td width="16%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><p><a href="activity.html">ทดสอบกิจกรรม 2</a></p></td>
+                    <td width="17%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><p><a href="activity.html">ทดสอบกิจกรรม 3</a></p></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div id="footer">
+            <p><strong>© Copyright 2009 - 2015 sb2store.com All rights reserved.</strong></p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <map name="Map2" id="Map2">
+        <area shape="rect" coords="7,8,153,54" href="@Url.Action("News")" />
+    </map>
+
+    <map name="Map3" id="Map3">
+        <area shape="rect" coords="2,5,160,57" href="@Url.Action("Activity")"  />
+    </map>
+    
+</body>
+</html>
