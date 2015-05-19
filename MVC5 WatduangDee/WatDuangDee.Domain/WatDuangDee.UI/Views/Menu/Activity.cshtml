@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WatDuangDee.Domain.Entities.Activity>
+@{
+    ViewBag.Title = "Activity";
+    
+}
+ 
+
+ <div class="panel panel-primary">
+    <div class="panel-heading"><h3>Activity</h3></div>
+
+    <div class="panel-body">
+
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading"><h3>Annual Activity</h3></div>
+
+                <div class="panel-body">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Type == "Annual")
+                        {
+                            
+                            if(item.ImageData !=null)
+                            {
+                                 <div>
+                      
+                        <a width="16%" align="center"><img src="@Url.Action("GetImage", "Menu", new { id = item.ActivityId,Type=2 })" width="600" height="400" />@Html.ActionLink(item.Topic, "ActDetail", new { id = item.ActivityId })</a>
+                    
+                    </div>
+                            }
+                            else
+                            {
+                                <div>
+                                    <a width="16%" align="center"><img src="~/Content/images/new_pic.png" width="150" height="113" />@Html.ActionLink(item.Topic, "ActDetail", new { id = item.ActivityId })</a>
+                                </div>
+                            }
+
+
+
+                        }
+                    }
+                   
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Other Activity</h3></div>
+
+                <div class="panel-body">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Type == "Other")
+                        {
+
+                            if (item.ImageData != null)
+                            {
+                              
+                            <div>
+
+                                <a width="16%" align="center"><img src="~/Content/images/new_pic.png" width="150" height="113" />@Html.ActionLink(item.Topic, "ActDetail", new { id = item.ActivityId })</a>
+
+                            </div>
+                            }
+                            else
+                            {<div>
+                                 <a width="16%" align="center"><img src="~/Content/images/new_pic.png" width="150" height="113" />@Html.ActionLink(item.Topic, "ActDetail", new { id = item.ActivityId })</a> 
+                           </div> }
+                        }
+                    }
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

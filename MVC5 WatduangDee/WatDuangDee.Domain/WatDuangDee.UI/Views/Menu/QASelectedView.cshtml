@@ -1,0 +1,35 @@
+﻿@model WatDuangDee.UI.Models.QAViewModel
+@{
+    ViewBag.Title = "ViewQuestion";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Question View</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-6"><b>Question : </b></div>
+        <div class="col-md-6">@Html.DisplayTextFor(x => Model.QuestionAnswerDhamma.Question)</div>
+        <div class="col-md-6"><b>Date :</b></div>
+        <div class="col-md-6">@Html.DisplayFor(m => Model.QuestionAnswerDhamma.Date.Day) - @Html.DisplayFor(m => Model.QuestionAnswerDhamma.Date.Month) - @Html.DisplayFor(m => Model.QuestionAnswerDhamma.Date.Year)</div>
+        <div class="col-md-6"><b>Answer : </b></div>
+        <div class="col-md-6">@Html.DisplayTextFor(x => Model.QuestionAnswerDhamma.Answer).</div>
+        <div class="col-md-6"><b>Picture : </b></div>
+        <div class="col-md-6">
+            @if (Model.QuestionAnswerDhamma.ImageData != null)
+            {
+                <img src="@Url.Action("GetImage", "Menu", new { id = Model.QuestionAnswerDhamma.QuestionId,Type=4 })" width="600" height="400" />
+
+            }
+            else
+            {
+                @Html.Raw(".")
+            }
+        </div>
+        <div class="col-md-6"><b>Asked : </b></div>
+        <div class="col-md-6">@Html.DisplayFor(x=>Model.ApplicationUser.Name)  @Html.DisplayFor(x=>Model.ApplicationUser.SurName) </div>
+        <div class="col-md-6"><b>Username : </b></div>
+        <div class="col-md-6">@Html.DisplayTextFor(x => Model.ApplicationUser.UserName)</div>
+    </div>
+</div>
+

@@ -1,0 +1,43 @@
+﻿@model WatDuangDee.Domain.Entities.History
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+    <h2>Details</h2>
+    <h4>History</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="col-md-6">@Html.DisplayNameFor(model => model.HistoryDetail)</th>
+                <th class="col-md-6">@Html.DisplayNameFor(model => model.ImageData)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="col-md-6">
+                    @Html.DisplayFor(model => model.HistoryDetail)
+                </td>
+                <td class="col-md-6">
+                    @if (Model.ImageData != null)
+                    {
+
+                        <img style="max-height:500px;" src="@Url.Action("GetImage", "History", new { id = Model.HistoryId })" />
+
+
+                    }
+                    else
+                    {
+                        @Html.Raw("No")
+                    }
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HistoryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

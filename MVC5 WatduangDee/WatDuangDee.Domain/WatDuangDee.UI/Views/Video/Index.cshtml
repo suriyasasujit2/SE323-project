@@ -1,0 +1,35 @@
+﻿@model IEnumerable<WatDuangDee.Domain.Entities.Video>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index Video Management</h2>
+
+<p>
+    @Html.ActionLink("Create New (เพิ่มวีดีโอ) ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Filckr Emded Code")
+        </th>
+        
+        <th>Click here for manage Album and Video from Flickr <a href="https://flickr.com/" target="_blank">here </a></th>
+        <th>คลิกที่นี่เพื่อเข้าสู่หน้าจัดการอัลบั้มและวีดีโอจาก Flickr <a href="https://flickr.com/" target="_blank">ที่นี่ </a></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Video_Path)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VideoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VideoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VideoId })
+        </td>
+    </tr>
+}
+
+</table>

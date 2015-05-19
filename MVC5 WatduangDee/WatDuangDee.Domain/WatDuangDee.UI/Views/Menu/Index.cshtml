@@ -1,0 +1,99 @@
+﻿@model WatDuangDee.UI.Models.IndexViewModel
+
+@{
+    ViewBag.Title = "Main";
+}
+ 
+            
+            <div id="bg_banner">
+                <div id="bg_welcome"></div>
+            </div>
+
+
+<div class="container">
+            <br />
+<div class="col-md-6">
+    <div class="col-md-6"><img src="~/Content/images/news_head.png" border="0" /></div>
+    <table width="100%" cellspacing="2">
+        <tr>
+            <td colspan="3" valign="top">&nbsp;</td>
+            <td colspan="3" valign="top">&nbsp;</td>
+        </tr>
+        @{
+            int count = 1;
+        }
+        <tr>
+            @foreach (var item in Model.News)
+            {
+                if (3 % count == 0)
+                {
+                   <tr></tr>
+                }
+                   if(item.ImageData !=null)
+                            {
+                                <td class="col-md-2"><img src="@Url.Action("GetImage", "Menu", new { id = item.NewsId,Type=3 })" width="150" height="113" /><br /><center>@Html.ActionLink(item.Topic, "NewsDetail", new { id = item.NewsId })</center></td>
+
+                            }
+                   else
+                   {
+
+                    <td class="col-md-2"><img src="~/Content/images/new_pic.png" width="150" height="113" /><br><center>@Html.ActionLink(item.Topic, "NewsDetail", new { id = item.NewsId })</center></td>
+
+                   }
+                count++;
+            }
+        </tr>
+        </table>
+
+</div>
+<div class="col-md-6">
+    <div class="col-md-6"><img src="~/Content/images/Act_head.png" border="0" /></div>
+    <table width="100%" cellspacing="2">
+        <tr>
+            <td colspan="3" valign="top">&nbsp;</td>
+            <td colspan="3" valign="top">&nbsp;</td>
+        </tr>
+        @{
+            int count2 = 1;
+        }
+        <tr>
+            @foreach (var item in Model.Activity)
+            {
+                 if (3 % count2 == 0)
+                {
+                   <tr></tr>
+                }
+                if (item.ImageData != null)
+                {
+                    <td width="33%" align="center" valign="top"><img width="150" height="133" src="@Url.Action("GetImage", "Menu", new { id = item.ActivityId,Type=2 })"  /><center>@Html.ActionLink(item.Topic, "ActDetail", new { id = item.ActivityId })</center></td>
+
+                }
+                else
+                {
+
+                    <td width="33%" align="center" valign="top"><img src="~/Content/images/new_pic.png" width="150" height="113" /><center>@Html.ActionLink(item.Topic, "ActDetail", new { id = item.ActivityId })</center></td>
+
+                }
+                count2++;
+            }
+        </tr>
+    </table>
+</div>
+
+
+
+</div>
+      
+
+ 
+ 
+
+
+    <map name="Map2" id="Map2">
+        <area shape="rect" coords="7,8,153,54" href="@Url.Action("News")" />
+    </map>
+
+    <map name="Map3" id="Map3">
+        <area shape="rect" coords="2,5,160,57" href="@Url.Action("Activity")" />
+    </map>
+ 

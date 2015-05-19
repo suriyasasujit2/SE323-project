@@ -1,0 +1,26 @@
+﻿@model WatDuangDee.Domain.Entities.Gallery
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details (อัลบั้ม)</h2>
+
+<div>
+    <h4>Gallery</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Flickr Embed Code Album")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Photo_Path)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GalleryId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

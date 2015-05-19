@@ -1,0 +1,95 @@
+﻿@model WatDuangDee.UI.Models.QAViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this ? (คุณแน่ใจที่จะลบข้อมูลนี้หรือไม่ ?)</h3>
+<div>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Question and Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+
+                    <dl class="dl-horizontal">
+
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.QuestionAnswerDhamma.Topic)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.QuestionAnswerDhamma.Topic)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.QuestionAnswerDhamma.Question)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.QuestionAnswerDhamma.Question)
+                        </dd>
+                        <dt>
+                            Asked By
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ApplicationUser.Name) @Html.DisplayFor(model => model.ApplicationUser.SurName)
+                        </dd>
+                        <dt>
+                            Username
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ApplicationUser.UserName)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.QuestionAnswerDhamma.ImageData)
+                        </dt>
+
+                        <dd>
+                            @if (Model.QuestionAnswerDhamma.ImageData == null)
+                            {
+                                @:None
+
+                            }
+
+                            else
+                            {
+                                <img width="40%" height="40% " src="@Url.Action("GetImage", "QuestionandAnswer", new { id = Model.QuestionAnswerDhamma.QuestionId })" />
+
+                            }
+
+
+                        </dd>
+
+
+
+                    </dl>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Delete" class="btn btn-default" /> |
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    }
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

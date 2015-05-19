@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WatDuangDee.Domain.Entities.History>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<br />
+<center>
+    <h3>
+        <p class="text-success">
+            @if (TempData["message"] != null)
+            {
+                @Html.Raw(TempData["message"]);
+            }
+            </p>
+    </h3>
+</center>
+
+
+<h2>History Management Index</h2>
+<p>(หน้าดูแล ประวัติวัด)</p>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="col-md-5">@Html.DisplayNameFor(model => model.HistoryDetail)</th>
+            <th class ="col-md-5">@Html.DisplayNameFor(model => model.ImageData)</th>
+            <th class="col-md-2"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+    <tr>
+        <td class="col-md-5">
+            @Html.DisplayFor(modelItem => item.HistoryDetail)
+        </td>
+        <td class="col-md-5">
+
+            @if (item.ImageData != null)
+            {
+
+                <img style="max-height:300px;" src="@Url.Action("GetImage", "History", new { id = item.HistoryId }) " />
+
+
+            }
+            else
+            {
+                @Html.Raw("No")
+            }
+        </td>
+
+        <td class ="col-md-2">
+            @Html.ActionLink("Edit", "Edit", new { id = item.HistoryId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.HistoryId })
+
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

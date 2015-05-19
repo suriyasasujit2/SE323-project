@@ -1,0 +1,62 @@
+﻿@model WatDuangDee.UI.Models.LeaveForComment
+@{
+    ViewBag.Title = "Contact Us";
+}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Map (แผนการเดินทางสู่ วัดดวงดี)</h3>
+    </div>
+    <div class="panel-body">
+        <iframe width="600"
+                height="450"
+                frameborder="1" style="border:inset"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC1g4WE9JYfJbUzhcpxnmv7XM15BVo6VXg&q=Wat+Duang+Dee"></iframe>
+        <div style="float:right;padding-right:10%;">
+
+
+            <h4>วัดดวงดี ตั้งอยู่ที่ 228 ถ.พระปกเกล้า ต.ศรีภูมิ <br />อ.เมืองเชียงใหม่ จังหวัดเชียงใหม่ (053248604, 053248607)</h4>
+
+             
+                @if (User.Identity.IsAuthenticated) { 
+               
+using (Html.BeginForm("EmailSend", "Menu",FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ <fieldset>
+                    <!-- Form Name -->
+                    <legend>Leave message</legend>
+
+                    <!-- Text input-->
+                    <div class="control-group">
+                        <label class="control-label" for="textinput">Topic</label>
+                        <div class="controls">
+                            @Html.TextBoxFor(m => Model.Topic,new {@class ="input-xlarge",@id="textinput"})
+                           
+
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="control-group">
+                        <label class="control-label" for="message">Message</label>
+                        <div class="controls">
+                            @Html.TextAreaFor(m => Model.Message, new { @class = "input-xlarge",@rows="14",@cols="50" })
+                     
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="control-group">
+                        <label class="control-label" for="submit_button"></label>
+                        <div class="controls">
+                            <button id="submit_button" name="submit_button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+
+                </fieldset>
+                }
+                }
+      
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,83 @@
+﻿@model WatDuangDee.Domain.Entities.Activity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Activity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Topic)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Topic)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.date)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.date)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.description)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.description)
+                        </dd>
+
+
+
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Type)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Type)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ImageData)
+                        </dt>
+
+                        <dd>
+                            @if (Model.ImageData != null)
+                            {
+
+                                <img width="30%" height="30% " class="img-thumbnail" src="@Url.Action("GetImage", "Activity", new { id = Model.ActivityId })" />
+
+
+                            }
+                            else
+                            {
+                                @Html.Raw("No")
+                            }
+                        </dd>
+                    </dl>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ActivityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

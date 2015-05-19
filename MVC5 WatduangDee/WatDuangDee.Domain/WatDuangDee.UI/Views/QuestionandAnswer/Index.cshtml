@@ -1,0 +1,58 @@
+﻿@model List<WatDuangDee.UI.Models.QAViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index (ถามตอบปัญหาธรรมะ)</h2>
+
+ <center>
+    <h3>
+        <p class="text-success">
+            @if (TempData["message"] != null)
+            {
+                @Html.Raw(TempData["message"]);
+            }
+        </p>
+    </h3>
+</center>
+<table class="table">
+    <tr>
+      <th class="col-md-1">User ID</th>
+        <th class="col-md-4">Topic</th>
+        <th class="col-md-2">Asked By</th>
+
+        <th class="col-md-1">Username</th>
+        <th class="col-md-1">Status</th>
+        <th class="col-md-2"></th>
+
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="col-md-1">
+
+            @Html.DisplayFor(modelItem => item.QuestionAnswerDhamma.UserId)
+        </td>
+        <td class="col-md-4">
+            @Html.DisplayFor(modelItem => item.QuestionAnswerDhamma.Topic)
+        </td>
+        <td class="col-md-2">
+            @Html.DisplayFor(modelItem => item.ApplicationUser.Name)  @Html.DisplayFor(modelItem => item.ApplicationUser.SurName)
+        </td>
+        <td class="col-md-1">
+            @Html.DisplayFor(modelItem => item.ApplicationUser.UserName)
+        </td>
+        <td class="col-md-1">
+            @Html.DisplayFor(modelItem => item.QuestionAnswerDhamma.Status)
+        </td>
+    
+        <td class="col-md-2">
+            @Html.ActionLink("Edit", "Edit", new { id = item.QuestionAnswerDhamma.QuestionId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.QuestionAnswerDhamma.QuestionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.QuestionAnswerDhamma.QuestionId })
+        </td>
+    </tr>
+}
+
+</table>

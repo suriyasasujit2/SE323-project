@@ -1,0 +1,119 @@
+﻿@model WatDuangDee.UI.Models.QAViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit (แก้ไข ถามตอบ ปัญหาธรรม)</h2>
+
+@using (Html.BeginForm("Edit", "QuestionandAnswer", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Qusetion and Answer Dhamma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.ValidationSummary(true)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.QuestionId)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.ImageData)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.ImageMimeType)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.Topic)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.Question)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.UserId)
+                        @Html.HiddenFor(model => model.QuestionAnswerDhamma.Date)
+
+                        <div class="form-group"><div class="col-md-12">
+    @Html.LabelFor(model => model.QuestionAnswerDhamma.Date, new { @class = "control-label col-md-2" })
+
+    @Html.DisplayFor(model => model.QuestionAnswerDhamma.Date, new { @class = "form-control" })
+
+                        </div>
+                        </div>
+
+                        <div class="form-group"><div class="col-md-12">
+    @Html.LabelFor(model => model.QuestionAnswerDhamma.Topic, new { @class = "control-label col-md-2" })
+
+    @Html.DisplayFor(model => model.QuestionAnswerDhamma.Topic, new { @class = "form-control" })
+
+</div>
+                        </div>
+
+                        <div class="form-group"><div class="col-md-12">
+    @Html.LabelFor(model => model.QuestionAnswerDhamma.Question, new { @class = "control-label col-md-2" })
+
+    @Html.DisplayFor(model => model.QuestionAnswerDhamma.Question, new { @class = "form-control" })
+
+</div>
+                        </div>
+
+                        <div class="form-group"><div class="col-md-12">
+    @Html.LabelFor(model => model.QuestionAnswerDhamma.Answer, new { @class = "control-label col-md-2" })
+
+    @Html.TextAreaFor(model => model.QuestionAnswerDhamma.Answer, new { @class = "form-control" })
+</div>
+                        </div>
+
+                        <div class="form-group"><div class="col-md-12">
+    @Html.LabelFor(model => model.QuestionAnswerDhamma.Status, new { @class = "control-label col-md-2" })
+
+
+    @Html.DropDownListFor(model => model.QuestionAnswerDhamma.Status, new SelectList(
+                  new List<Object>{
+                       new { value = "Yes" , text = "Approve"},
+                       new { value = "No" , text = "Not Approve" }
+
+                    },
+                  "value",
+                  "text", 2))
+
+</div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.QuestionAnswerDhamma.ImageData, new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+
+                                <div class="editor-field">
+                                    <br />
+
+                                    @if (Model.QuestionAnswerDhamma.ImageData == null)
+                                    {
+                                        @:None
+
+                                    }
+
+                                    else
+                                    {
+                                        <img width="40%" height="40% " src="@Url.Action("GetImage", "QuestionandAnswer", new { id = Model.QuestionAnswerDhamma.QuestionId })" />
+
+                                    }
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-12">
+                                <input type="submit" value="Save" class="btn btn-default" />
+                                @Html.ActionLink("Back to List", "Index")
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+
+

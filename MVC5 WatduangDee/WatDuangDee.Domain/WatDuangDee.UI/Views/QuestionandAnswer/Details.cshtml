@@ -1,0 +1,93 @@
+﻿@model WatDuangDee.UI.Models.QAViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details (รายละเอียด ถามตอบปัญหาธรรม)</h2>
+
+<div>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Question and Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            User Id
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ApplicationUser.Id)
+                        </dd>
+                        <br />
+                        <dt>
+                            Topic
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.QuestionAnswerDhamma.Topic)
+                        </dd>
+                        <br />
+                        <dt>
+                            Question
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.QuestionAnswerDhamma.Question)
+                        </dd>
+                        <br />
+                        <dt>
+                            Answer
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.QuestionAnswerDhamma.Answer)
+                        </dd>
+                        <br />
+                        <dt>
+                            Status
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.QuestionAnswerDhamma.Status)
+                        </dd>
+                        <br />
+                        <dt>
+                            Picture
+                        </dt>
+
+                        <dd>
+                            @if (Model.QuestionAnswerDhamma.ImageData != null)
+                            {
+
+                                <img width="30%" height="30% " src="@Url.Action("GetImage", "QuestionandAnswer", new { id = Model.QuestionAnswerDhamma.QuestionId })" />
+
+
+                            }
+                            else
+                            {
+                                @Html.Raw("No")
+                            }
+                        </dd>
+
+
+                    </dl>
+
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QuestionAnswerDhamma.QuestionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

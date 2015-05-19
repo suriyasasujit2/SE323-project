@@ -1,0 +1,32 @@
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\WatDuangDee.Domain.dll.config
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\WatDuangDee.Domain.dll
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\WatDuangDee.Domain.pdb
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.dll
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.xml
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.csprojResolveAssemblyReference.cache
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.dll
+c:\users\tua\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.pdb
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.Migrations.InitialCreate.resources
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.csproj.GenerateResource.Cache
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.Migrations.RegisteredUser.resources
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.Migrations.Activity.resources
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.Migrations.Lesson.resources
+C:\Users\TuA\documents\visual studio 2013\Projects\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.Migrations.OtherEntities.resources
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\WatDuangDee.Domain.dll.config
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\WatDuangDee.Domain.dll
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\WatDuangDee.Domain.pdb
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.dll
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.xml
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.dll
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.pdb
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.csprojResolveAssemblyReference.cache
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.Migrations.Datetime.resources
+C:\Users\TuA\Documents\Visual Studio 2013\Projects\MVC5 WatduangDee\WatDuangDee.Domain\WatDuangDee.Domain\obj\Debug\WatDuangDee.Domain.csproj.GenerateResource.Cache

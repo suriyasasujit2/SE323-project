@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.9.0/bootstrap-social.min.css">
+    <link rel="stylesheet" href="~/Content/font-awesome/css/font-awesome.min.css">
+   
+</head>
+<body>
+        <div id="warpall">
+            <div id="warpall2">
+                
+                @Html.Partial("_LoginPartial")
+                    <!-- <div class="col-md-3">
+                        <img src="~/Content/Last bar/logosb2.png" />
+                    </div>
+                    <div class="col-md-9">
+                        <a href="@Url.Action("Index","Menu")"><img src="~/Content/Last bar/main.png" /></a>
+                        <a href="@Url.Action("History", "Menu")"><img src="~/Content/Last bar/history.png" /></a>
+                        <a href="@Url.Action("News", "Menu")"><img src="~/Content/Last bar/news.png" /></a>
+                        <a href="@Url.Action("Activity", "Menu")"><img src="~/Content/Last bar/act.png" /></a>
+                        <a href="@Url.Action("QA", "Menu")"><img src="~/Content/Last bar/q-a.png" /></a>
+                        <a href="@Url.Action("Dhamma", "Menu")"><img src="~/Content/Last bar/dhamma.png" /></a>
+                        <a href="@Url.Action("Photo", "Menu")"><img src="~/Content/Last bar/Photo.png" /></a>
+                        <a href="@Url.Action("Video", "Menu")"><img src="~/Content/Last bar/video.png" /></a>
+                        <a href="@Url.Action("Contact", "Menu")"><img src="~/Content/Last bar/menu_barfin-Recovered.png" /></a>
+                    </div>
+                    <div class="col-md-1">
+
+                        <a href="https://www.facebook.com/pages/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%94%E0%B8%B5-WatDuangDee-%E0%B8%95%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4-%E0%B8%AD%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%88%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88/235249413192448" target="_blank">
+                            <img src="~/Content/Last bar/facebook.png" />
+                        </a>
+                        </div>
+
+
+
+                </div> -->
+                <div class="menu">
+                    <div class="col-md-11" id="bar">
+                        <nav class="navbar navbar" role="banner">
+                            <div class="navbar-header col-md-2">
+                                <a href="#" class="navbar-brand">
+                                    <img style="max-width:100px; margin-top: -7px;"
+                                         src="~/Content/Last bar/logosb2.png">
+                                </a>
+                            </div>
+                                <nav class="collapse navbar-collapse" role="navigation">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("Index","Menu")">Main หน้าหลัก</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("History","Menu")">History ประวัติ</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("News","Menu")">News ข่าวสาร</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("Activity","Menu")">กิจกรรม Activity</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("QA","Menu")">QA ถาม-ตอบ</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("Dhamma","Menu")">Dhamma ธรรมะ</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("Photo","Menu")">Photo รูปภาพ</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("Video","Menu")">Video วีดีโอ</a>
+                                        </li>
+                                        <li>
+                                            <a class="page-scroll" href="@Url.Action("Contact","Menu")">Contact Us</a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+
+</nav>
+
+                    </div>
+                    <a class="btn btn-social-icon btn-facebook col-md-1" href="https://www.facebook.com/pages/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%94%E0%B8%A7%E0%B8%87%E0%B8%94%E0%B8%B5/106622582742952?fref=ts">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="content">
+                @RenderBody()
+
+            </div>
+
+
+
+            @Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+
+
+        </div>
+   
+    
+</body>
+</html>
+<footer>
+    <div id="footer">
+        <p><strong>© Copyright @DateTime.Now.Year Sb2Store Group. All rights reserved.</strong></p>
+    </div>
+</footer>
+

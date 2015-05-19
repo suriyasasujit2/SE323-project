@@ -1,0 +1,74 @@
+﻿@model WatDuangDee.Domain.Entities.QuestionAnswerDhamma
+@using Microsoft.AspNet.Identity
+
+
+<script src="~/content/datetimepicker-master/jquery.js"></script>
+<script src="~/content/datetimepicker-master/jquery.datetimepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="datetimepicker-master/jquery.datetimepicker.css" />
+<script>
+    $('#datetimepicker1').datetimepicker({
+        datepicker: false,
+        format: 'H:i',
+        step: 1
+    });
+</script>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Asking Dhamma Question (ถามปัญหา ธรรรมะ)</h3>
+    </div>
+    <div class="panel-body">
+        @Html.ValidationSummary(true)
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Topic, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Topic, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Topic)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Question, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Question, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Question)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date, new { @id = "datetimepicker1", @class = "form-control" })
+
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.Label("Picture", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               
+
+                Upload new image: <input type="file" name="Image" />
+            </div>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit (ส่งคำถาม)" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

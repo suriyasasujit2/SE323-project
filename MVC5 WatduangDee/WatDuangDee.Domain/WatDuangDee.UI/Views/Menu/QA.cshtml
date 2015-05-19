@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WatDuangDee.UI.Models.QAViewModel>
+
+@{
+    ViewBag.Title = "Dhamma Question and Answer";
+}
+ 
+
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3>Dhamma Question & Answer (ถามตอบปัญหาธรรมะ)</h3>
+
+
+            @using (Html.BeginForm("AskQA", "Menu"))
+            {<input type="submit" name="ask" value="Ask For Question" class="btn btn-default"/>}
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <!--<th>#</th>-->
+                    <th>Topic (หัวข้อ)</th>
+                    <th>Date (วันที่)</th>
+                    <th>Ask By (ถามโดย)</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+  @foreach (var item in Model)
+{
+    <tr>
+
+        <td width="50%">@Html.ActionLink(item.QuestionAnswerDhamma.Topic.ToString(), "QASelectedView", new { id = item.QuestionAnswerDhamma.QuestionId })</td>
+
+        <td>@Html.DisplayTextFor(m => item.QuestionAnswerDhamma.Date.Day) - @Html.DisplayTextFor(m => item.QuestionAnswerDhamma.Date.Month) - @Html.DisplayTextFor(m => item.QuestionAnswerDhamma.Date.Year)</td>
+
+        <td>@Html.DisplayTextFor(m => item.ApplicationUser.Name) @Html.DisplayTextFor(m => item.ApplicationUser.SurName)</td>
+        <td>@Html.DisplayTextFor(m => item.ApplicationUser.UserName)</td>
+    </tr>
+}
+            </tbody>
+        </table>
+        
+    </div>    

@@ -1,0 +1,113 @@
+﻿@model WatDuangDee.Domain.Entities.Activity
+
+@{
+    ViewBag.Title = "Create";
+}
+<script src="~/content/datetimepicker-master/jquery.js"></script>
+<script src="~/content/datetimepicker-master/jquery.datetimepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="datetimepicker-master/jquery.datetimepicker.css" />
+<script>
+    $('#datetimepicker1').datetimepicker({
+        datepicker: false,
+        format: 'H:i',
+        step: 1
+    });
+</script>
+
+
+
+
+
+@using (Html.BeginForm("Create", "Activity", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+    @Html.AntiForgeryToken()
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <h2>Create Activity </h2>
+                    <h4>(หน้าเพิ่มกิจกรรม)</h4>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true)
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <b>Topic (หัวข้อ):</b>
+
+                                @Html.TextBoxFor(model => model.Topic, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Topic)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                <b>Date (วันที่):</b> &nbsp;
+                                @Html.EditorFor(model => model.date, new { @id = "datetimepicker1", @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.date)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b> Description(คำอธิบาย):</b>
+                                @Html.TextAreaFor(model => model.description, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.description)
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+                                <b>Type of Activity (ประเภทของกิจกรรม):</b>&nbsp;<br />
+                                @Html.DropDownListFor(model => model.Type, new SelectList(
+                  new List<Object>{
+                       new { value = "Annual" , text = "Annual"  },
+                       new { value = "Other" , text = "Other" }
+
+                    },
+                  "value",
+                  "text", 2))
+                                @Html.ValidationMessageFor(model => model.Type)
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-md-10">
+
+                                <div class="editor-field">
+
+                                    <br />
+
+
+
+                                    <b>
+                                        Picture [รูปภาพ (*ถ้ามี) ]
+                                        <br /> Upload new image (คลิกที่เพื่อเพิ่มรูปภาพ):
+                                    </b><input type="file" name="Image" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-md-offset col-md-10">
+                                <input type="submit" value="Create (สร้างกิจกรรม)" class="btn btn-default" /> |
+                                @Html.ActionLink("Back to List", "Index")
+                            </div>
+                        </div>
+                    </div>
+                 
+                </td>
+
+            </tr>
+        </tbody>
+    </table>   }

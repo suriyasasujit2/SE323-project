@@ -1,0 +1,79 @@
+﻿@model WatDuangDee.Domain.Entities.History
+
+@{
+    ViewBag.Title = "Edit";
+   
+} 
+
+
+<div class="col-md-10">
+
+</div>
+<div class="col-md-2" >
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+    <h2>Edit</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>History</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+@using (Html.BeginForm("Edit", "History", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.HistoryId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HistoryDetail, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.HistoryDetail, new {@row=5,@cols=45 })
+                @Html.ValidationMessageFor(model => model.HistoryDetail)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ImageData, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+                <div class="editor-field">
+                    <br />
+
+                    @if (Model.ImageData == null)
+                    {
+                        @:None
+
+                    }
+
+                    else
+                    {
+                        <img style="max-height:100px;" src="@Url.Action("GetImage", "History", new { id = Model.HistoryId })" />
+
+                    }
+
+                    <div> <br /> Upload new image: <input type="file" name="Image" /></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}</td>
+
+            </tr>
+        </tbody>
+    </table>

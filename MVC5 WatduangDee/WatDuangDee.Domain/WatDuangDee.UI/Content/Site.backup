@@ -1,0 +1,121 @@
+﻿body {
+    
+      
+    background-image:url(images/DSCF9472.jpg);
+    background-size:20%;
+    color:#FFF; 
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+ 
+ 
+ 
+
+#warpall{
+    width:80%; 
+    height:auto; 
+    margin:auto; 
+ 
+       background:#000; 
+    border:1px #000000;
+}
+
+ 
+
+#warpall2{
+    background:#000; 
+    width:100%;
+    height:auto; 
+    margin:auto; 
+   padding-bottom:80px;
+    
+}
+
+#bg_banner{
+    background:url(images/banner_web.png);
+    height:385px; 
+    
+    padding-top:30px;
+}
+#bg_welcome{
+    background:url(images/bg_welcome.png); 
+    width:744px; 
+    height:331px; 
+    margin:auto;
+}
+ 
+ 
+
+#footer{
+   
+   padding-top:5px;
+    padding-bottom:5px;
+   
+       margin:auto; 
+     height:30px;
+    width:80%; 
+   
+    background:#21abe4; 
+     color:#d2d0c2; 
+    text-align:center;
+}
+#content{
+    
+    height:auto; 
+    padding:20px; 
+    width:auto; 
+    background-color:#eee; 
+    
+    color:#000;
+     
+    
+}
+
+#bar{background:#000; 
+      padding-top:60px;
+}
+#bar-right{
+     
+    float:right;
+    padding-right:50px;
+    
+}
+#sub{
+    background:#000;
+}

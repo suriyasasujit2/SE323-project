@@ -1,0 +1,33 @@
+﻿@model WatDuangDee.Domain.Entities.Lesson
+@{
+    ViewBag.Title = "DhammaLessonView";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Dhamma Lesson (สาระธรรม)</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-6"><b>Topic : </b></div>
+        <div class="col-md-6">@Html.DisplayTextFor(x => Model.Topic)</div>
+        <br/>
+        <div class="col-md-6"><b>Date :</b></div> 
+       <div class="col-md-6">@Html.DisplayFor(m => Model.date.Day) - @Html.DisplayFor(m => Model.date.Month) - @Html.DisplayFor(m => Model.date.Year)</div>
+        <br />
+        <div class="col-md-6"><b>Description : </b></div>
+        <div class="col-md-6">@Html.DisplayTextFor(x => Model.description).</div>
+        <br />
+        <div class="col-md-6"><b>Picture : </b></div>
+        <div class="col-md-6">
+            @if (Model.ImageData != null)
+            {
+                <img src="@Url.Action("GetImage", "Menu", new { id = Model.LessonId,Type=5 })" width="600" height="400" />
+
+            }
+            else
+            {
+                @Html.Raw(".")
+            }
+        </div>
+         </div>
+</div>

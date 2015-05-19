@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WatDuangDee.Domain.Entities.Lesson>
+@{
+    ViewBag.Title = "Dhamma Lesson";
+}
+
+
+         
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Dhamma Lesson (สาระธรรม)</h3>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Date</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr>
+                    @foreach (var item in Model)
+                    {
+                    <td>@Html.ActionLink(item.Topic, "DhammaLessonView", new {id= item.LessonId })</td>
+                    <td>@Html.DisplayTextFor(m => item.date.Day) - @Html.DisplayTextFor(m => item.date.Month) - @Html.DisplayTextFor(m => item.date.Year)</td>
+                        
+                    }
+                   
+                  
+                </tr>
+            
+        </tbody>
+    </table>
+
+</div>    

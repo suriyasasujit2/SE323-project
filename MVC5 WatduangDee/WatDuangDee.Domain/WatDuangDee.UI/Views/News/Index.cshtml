@@ -1,0 +1,98 @@
+﻿@model IEnumerable<WatDuangDee.Domain.Entities.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+   
+
+
+
+
+<!---->
+
+<br />
+<center>
+    <h3>
+        <p class="text-success">
+            @if (TempData["message"] != null)
+            {
+                @Html.Raw(TempData["message"]);
+            }
+        </p>
+    </h3>
+</center>
+
+
+<h2>News Management Index</h2>
+<p>(หน้าดูแลข่าวสาร)</p>
+
+<p>
+    @Html.ActionLink("Create New (เพิ่มข่าว) ", "Create")
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="col-md-1">
+                @Html.DisplayNameFor(model => model.Topic)
+            </th>
+            <th class="col-md-1">
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th class="col-md-4">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th class="col-md-4">
+                @Html.DisplayNameFor(model => model.ImageData)
+            </th>
+            <th class="col-md-2">
+            </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+       @foreach (var item in Model)
+        {
+
+            <tr>
+                <td class="col-md-1">
+                    @Html.DisplayFor(modelItem => item.Topic)
+                </td>
+                <td class="col-md-1">
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td class="col-md-4">
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td class="col-md-4">
+                    @if (item.ImageData != null)
+                    {
+
+                        <img style="max-height:100px;" src="@Url.Action("GetImage", "News", new { id = item.NewsId })" />
+
+
+                    }
+                    else
+                    {
+                        @Html.Raw("No")
+                    }
+                </td>
+
+
+         
+          
+                <td class="col-md-2">
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.NewsId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.NewsId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.NewsId })
+                </td>
+                
+                </tr>
+        }
+    </tbody>
+</table>

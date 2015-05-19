@@ -1,0 +1,74 @@
+﻿@model WatDuangDee.Domain.Entities.News
+
+@{
+    ViewBag.Title = "Details";
+}
+<!--
+  
+-->
+<h2>Details</h2>
+<h4>News</h4>
+<table class="table">
+    <thead>
+        <tr>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Topic)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Topic)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Date)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Description)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ImageData)
+                    </dt>
+
+                    <dd>
+                        @if (Model.ImageData != null)
+                        {
+
+                            <img width="30%" height="30% " src="@Url.Action("GetImage", "News", new { id = Model.NewsId })" />
+
+
+                        }
+                        else
+                        {
+                            @Html.Raw("No")
+                        }
+                    </dd>
+
+
+
+                </dl>
+            </td>
+
+        </tr>   
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NewsId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
