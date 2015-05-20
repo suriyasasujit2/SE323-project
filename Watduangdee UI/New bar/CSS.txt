@@ -1,0 +1,3 @@
+
+#bar{background:
+#000; width:1200px; height:77px; margin:auto; }

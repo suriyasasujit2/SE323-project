@@ -1,0 +1,12 @@
+<div id="bar">
+<img src="../Last bar/logosb2.png"/>
+
+<img src="../Last bar/main.png"/>
+    <img src="../Last bar/history.png"/> <img src="../Last bar/news.png"/>
+<img src="../Last bar/act.png"/>
+<img src="../Last bar/q-a.png"/>
+<img src="../Last bar/dhamma.png"/>
+<img src="../Last bar/Photo.png"/>
+<img src="../Last bar/video.png"/><img src="../Pic_edit/Last bar/menu_barfin-Recovered.png"/>
+<img src="../Last bar/facebook.png"/>
+</div>
